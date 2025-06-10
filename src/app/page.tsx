@@ -6,6 +6,12 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SkillsSection } from "@/components/SkillsSection"; // <-- Pasul 1: Importăm noua componentă
 import { TypeAnimation } from 'react-type-animation';
+import dynamic from 'next/dynamic';
+
+const Hand3D = dynamic(() => import('@/components/Hand3D'), {
+    ssr: false
+});
+
 import Image from 'next/image';
 
 export default function Home() {
@@ -23,7 +29,7 @@ export default function Home() {
                             <h1 className="text-4xl md:text-6xl font-bold mb-4 h-32">
                                 <TypeAnimation
                                     sequence={[
-                                        'Salut, numele meu este Paul.',
+                                        "Hi, I'm Paul.",
                                         2000,
                                         'Self-Taught Web Developer.',
                                         2000,
@@ -62,8 +68,36 @@ export default function Home() {
                 </div>
             </main>
 
-            {/* ======== Secțiunea Competențe ======== */}
-            {/* Pasul 2: Adăugăm componenta aici, între Main și Footer */}
+            {/* ======== Secțiunea Citat & 3D ======== */}
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4 text-center">
+
+                    {/* Citatul de la Steve Jobs */}
+                    <figure className="max-w-4xl mx-auto mb-12">
+                        <blockquote className="text-xl md:text-2xl italic text-center text-gray-700 leading-relaxed">
+                            <p>&#34;Everything around you that you call life was made up by people that were no smarter than you, and you can change it, you can influence it, you can build your own things that other people can use.&#34;</p>
+                        </blockquote>
+                        <figcaption className="mt-4 text-right font-semibold text-gray-800">
+                            — Steve Jobs
+                        </figcaption>
+                    </figure>
+
+                    {/* Modelul 3D */}
+                    <Hand3D />
+
+                    {/* --- AICI ADAUGĂM BUTONUL --- */}
+                    <div className="mt-12">
+                        <a
+                            href="/CV_Cureu_Paul.pdf"
+                            download="CV-Paul-Cazacu.pdf"
+                            className="inline-block bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-xl hover:bg-gray-300 transition-colors duration-200 text-lg"
+                        >
+                            C&#39;est ma Vie (CV)
+                        </a>
+                    </div>
+
+                </div>
+            </section>
             <SkillsSection />
 
             <Footer />
