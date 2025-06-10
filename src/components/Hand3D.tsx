@@ -53,7 +53,7 @@ const Model = () => {
 
 const Hand3D = () => {
     return (
-        <div style={{ height: '400px', width: '100%', cursor: 'grab' }}>
+        <div style={{ height: '400px', width: '100%', cursor: 'grab', touchAction: 'none' }}>
             <Canvas dpr={[1, 2]} camera={{ fov: 45 }}>
                 <Suspense fallback={null}>
                     <Stage environment="city" intensity={0.6} shadows={false}>
