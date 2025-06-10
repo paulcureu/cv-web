@@ -7,10 +7,9 @@ export function Header() {
         <header className="bg-white/90 backdrop-blur-lg sticky top-0 z-10 border-b">
             <div className="container mx-auto flex justify-between items-center p-4">
 
-                {/* Am înlocuit textul cu un link ce conține logo-ul și numele */}
                 <Link href="/" className="flex items-center gap-3">
                     <Image
-                        src="/balkancode-logo.png" // <-- Asigură-te că numele corespunde cu fișierul tău
+                        src="/balkancode-logo.png"
                         alt="BalkanCode Logo"
                         width={130}
                         height={130}
@@ -19,11 +18,11 @@ export function Header() {
                 </Link>
 
                 <nav className="flex items-center gap-6 text-gray-600">
-                    <Link href="#proiecte" className="hover:text-black transition-colors">
-                        Proiecte
+                    <Link href="#about" className="hover:text-black transition-colors">
+                        About Me
                     </Link>
-                    <Link href="#competente" className="hover:text-black transition-colors">
-                        Competențe
+                    <Link href="#letter" className="hover:text-black transition-colors">
+                        Cover Letter
                     </Link>
                 </nav>
             </div>

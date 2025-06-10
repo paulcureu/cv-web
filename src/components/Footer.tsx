@@ -5,7 +5,7 @@ export function Footer() {
 
     return (
         <footer className="text-center p-6 border-t text-sm text-gray-500">
-            <p>© {currentYear} Paul C. Toate drepturile rezervate.</p>
+            <p>© {currentYear} BalkanCode. All rights reserved.</p>
             <div className="flex justify-center gap-4 mt-2">
                 <Link href="https://github.com/paulcureu" target="_blank" rel="noopener noreferrer" className="hover:underline">
                     GitHub

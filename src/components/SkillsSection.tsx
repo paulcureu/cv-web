@@ -21,14 +21,14 @@ const skillCategories = [
         ]
     },
     {
-        title: "Baze de Date & ORM",
+        title: "Databases & ORMs",
         skills: [
             { name: 'PostgreSQL', icon: 'postgresql.svg' },
             { name: 'Prisma', icon: 'prisma.svg' },
         ]
     },
     {
-        title: "DevOps & Unelte",
+        title: "DevOps & Tooling",
         skills: [
             {name: 'Swagger', icon: 'swagger.svg' },
             { name: 'Git', icon: 'git.svg' },
@@ -40,10 +40,11 @@ const skillCategories = [
         ]
     },
     {
-        title: "Testare",
+        title: "Testing & Quality Assurance",
         skills: [
             { name: 'Jest', icon: 'jest.svg' },
             { name: 'Selenium', icon: 'selenium.svg' },
+            { name: 'Faith', icon: 'faith.svg' },
         ]
     },
 ];
@@ -53,7 +54,7 @@ export function SkillsSection() {
         <section id="competente" className="bg-white px-4 py-16 md:py-24">
     <div className="container mx-auto">
     <h2 className="text-3xl font-bold text-center mb-16">
-        Competențe Tehnice
+        Technologies I Use to Build Meaning
     </h2>
 
     <div className="space-y-12">

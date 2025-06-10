@@ -40,14 +40,14 @@ export default function Home() {
                                 />
                             </h1>
                             <p className="text-lg md:text-xl text-gray-600 mb-8">
-                                Pasionat de crearea unor aplicații web moderne, performante și intuitive.
+                                If you think math is hard, try web design.
                             </p>
                             <div className="flex justify-center md:justify-start gap-4">
                                 <a href="#contact" className="bg-black text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors">
-                                    Contactează-mă
+                                    Contact me
                                 </a>
                                 <a href="#proiecte" className="bg-gray-200 text-black font-semibold py-3 px-6 rounded-lg hover:bg-gray-300 transition-colors">
-                                    Vezi Proiectele
+                                    Look at my projects
                                 </a>
                             </div>
                         </div>
