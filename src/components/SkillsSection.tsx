@@ -30,6 +30,7 @@ const skillCategories = [
     {
         title: "DevOps & Unelte",
         skills: [
+            {name: 'Swagger', icon: 'swagger.svg' },
             { name: 'Git', icon: 'git.svg' },
             { name: 'GitHub', icon: 'github.svg' },
             { name: 'Docker', icon: 'docker.svg' },
