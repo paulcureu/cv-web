@@ -25,7 +25,7 @@ export default function Home() {
                 <div className="container mx-auto p-4">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="text-center md:text-left">
-                            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+                            <h1 className="text-4xl md:text-6xl font-bold mb-6 md:mb-8 flex items-center justify-center md:justify-start h-28 md:h-32">
                                 <TypeAnimation
                                     sequence={[
                                         "Hi, I'm Paul.",
