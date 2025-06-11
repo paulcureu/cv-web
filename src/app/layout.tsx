@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "BalkanCode",
-    description: "Portofoliul personal al lui Paul C., un dezvoltator pasionat.",
+    description: "The personal portfolio of BalkanCode — a web developer crafting clarity, discipline, and purpose through code.",
     icons: {
         icon: '/balkancode-logo-ico.png',
     },
