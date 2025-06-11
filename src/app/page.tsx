@@ -6,9 +6,12 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SkillsSection } from "@/components/SkillsSection";
 import { ProjectsSection } from '@/components/ProjectsSection';
+import Hero from '@/components/Hero';
 import { TypeAnimation } from 'react-type-animation';
 import dynamic from 'next/dynamic';
 import { Download } from 'lucide-react';
+
+
 const Hand3D = dynamic(() => import('@/components/Hand3D'), {
     ssr: false
 });
@@ -21,50 +24,7 @@ export default function Home() {
             <Header />
 
             {/* ======== Secțiunea Hero ======== */}
-            <main className="flex-grow flex items-center">
-                <div className="container mx-auto p-4">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="text-center md:text-left">
-                            <h1 className="text-4xl md:text-6xl font-bold mb-6 md:mb-8 flex items-center justify-center md:justify-start h-28 md:h-32">
-                                <TypeAnimation
-                                    sequence={[
-                                        "Hi, I'm Paul.",
-                                        2000,
-                                        'Self-Taught Web Developer.',
-                                        2000,
-                                    ]}
-                                    wrapper="span"
-                                    speed={50}
-                                    repeat={Infinity}
-                                />
-                            </h1>
-                            <p className="text-lg md:text-xl text-gray-600 mb-8">
-                                If you think math is hard, try web design.
-                            </p>
-                            <div className="flex justify-center md:justify-start gap-4">
-                                <a href="#contact" className="bg-black text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors">
-                                    Contact me
-                                </a>
-                                <a href="#proiecte" className="bg-gray-200 text-black font-semibold py-3 px-6 rounded-lg hover:bg-gray-300 transition-colors">
-                                    Look at my projects
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="flex justify-center">
-                            <Image
-                                src="/avatar.png"
-                                alt="Fotografia lui Paul C."
-                                width={300}
-                                height={300}
-                                className="rounded-full shadow-lg"
-                                priority
-                            />
-                        </div>
-
-                    </div>
-                </div>
-            </main>
+            <Hero />
 
             {/* ======== Secțiunea Citat & 3D ======== */}
             <section className="py-16 bg-white">
