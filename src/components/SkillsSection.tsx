@@ -34,6 +34,7 @@ const skillCategories = [
             { name: 'Git', icon: 'git.svg' },
             { name: 'GitHub', icon: 'github.svg' },
             { name: 'Docker', icon: 'docker.svg' },
+            { name: 'Figma', icon: 'figma.svg' },
             { name: 'Vercel', icon: 'vercel.svg' },
             { name: 'Railway', icon: 'railway.svg' },
             { name: 'Postman', icon: 'postman.svg' },
