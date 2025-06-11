@@ -86,7 +86,7 @@ export default function Home() {
                             download="CV-Paul-Cazacu.pdf"
                             className="inline-block bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-xl hover:bg-gray-300 transition-colors duration-200 text-lg"
                         >
-                            Reveal CV
+                            Curriculum Vitæ
                         </a>
                     </div>
 
