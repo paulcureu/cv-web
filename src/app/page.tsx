@@ -1,10 +1,11 @@
 // src/app/page.tsx
 
-'use client'; // Necesar pentru componenta de animație
+'use client';
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SkillsSection } from "@/components/SkillsSection"; // <-- Pasul 1: Importăm noua componentă
+import { SkillsSection } from "@/components/SkillsSection";
+import { ProjectsSection } from '@/components/ProjectsSection';
 import { TypeAnimation } from 'react-type-animation';
 import dynamic from 'next/dynamic';
 
@@ -23,8 +24,6 @@ export default function Home() {
             <main className="flex-grow flex items-center">
                 <div className="container mx-auto p-4">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-
-                        {/* Coloana Stânga: Textul */}
                         <div className="text-center md:text-left">
                             <h1 className="text-4xl md:text-6xl font-bold mb-4 h-32">
                                 <TypeAnimation
@@ -52,7 +51,6 @@ export default function Home() {
                             </div>
                         </div>
 
-                        {/* Coloana Dreapta: Imaginea */}
                         <div className="flex justify-center">
                             <Image
                                 src="/avatar.png"
@@ -72,7 +70,7 @@ export default function Home() {
             <section className="py-16 bg-white">
                 <div className="container mx-auto px-4 text-center">
 
-                    {/* Citatul de la Steve Jobs */}
+                    {/*Steve Jobs */}
                     <figure className="max-w-4xl mx-auto mb-12">
                         <blockquote className="text-xl md:text-2xl italic text-center text-gray-700 leading-relaxed">
                             <p>&#34;Everything around you that you call life was made up by people that were no smarter than you, and you can change it, you can influence it, you can build your own things that other people can use.&#34;</p>
@@ -81,11 +79,7 @@ export default function Home() {
                             — Steve Jobs
                         </figcaption>
                     </figure>
-
-                    {/* Modelul 3D */}
                     <Hand3D />
-
-                    {/* --- AICI ADAUGĂM BUTONUL --- */}
                     <div className="mt-12">
                         <a
                             href="/CV_Cureu_Paul.pdf"
@@ -99,7 +93,7 @@ export default function Home() {
                 </div>
             </section>
             <SkillsSection />
-
+            <ProjectsSection />
             <Footer />
         </div>
     );
