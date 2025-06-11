@@ -1,6 +1,6 @@
 // src/components/ProjectCard.tsx
 import Image from 'next/image';
-import Link from 'next/link';
+// Nu mai avem nevoie de `Link` din Next.js, deoarece folosim un link extern
 import type { projects } from '@/lib/data';
 
 type ProjectType = (typeof projects)[number] & { imageGray?: string };
@@ -11,10 +11,13 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project }: ProjectCardProps) {
     return (
-        <Link
-            href={`/proiecte/${project.slug}`}
+        <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="block group bg-white rounded-lg border border-gray-300 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
         >
+
             <div className="relative h-48">
                 <Image
                     src={project.image}
@@ -22,7 +25,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-
                 {project.imageGray && (
                     <Image
                         src={project.imageGray}
@@ -32,6 +34,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                     />
                 )}
             </div>
+
 
             <div className="p-6">
                 <h3 className="text-xl font-bold text-slate-800 mb-2">{project.title}</h3>
@@ -44,6 +47,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
                     ))}
                 </div>
             </div>
-        </Link>
+        </a>
     );
 }
