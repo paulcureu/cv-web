@@ -8,7 +8,7 @@ import { SkillsSection } from "@/components/SkillsSection";
 import { ProjectsSection } from '@/components/ProjectsSection';
 import { TypeAnimation } from 'react-type-animation';
 import dynamic from 'next/dynamic';
-
+import { Download } from 'lucide-react';
 const Hand3D = dynamic(() => import('@/components/Hand3D'), {
     ssr: false
 });
@@ -83,9 +83,11 @@ export default function Home() {
                     <div className="mt-12">
                         <a
                             href="/CV_Cureu_Paul.pdf"
-                            download="CV-Paul-Cazacu.pdf"
-                            className="inline-block bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-xl hover:bg-gray-300 transition-colors duration-200 text-lg"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-gray-800 to-black px-8 py-3 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
                         >
+                            <Download className="h-5 w-5 transition-transform duration-300 group-hover:-rotate-12" />
                             Curriculum Vitæ
                         </a>
                     </div>
