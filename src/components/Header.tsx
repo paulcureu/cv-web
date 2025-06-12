@@ -21,7 +21,7 @@ export function Header() {
                     <Link href="#about" className="hover:text-black transition-colors">
                         About Me
                     </Link>
-                    <Link href="#letter" className="hover:text-black transition-colors">
+                    <Link href="/cover-letter" className="hover:text-black transition-colors">
                         Cover Letter
                     </Link>
                 </nav>
