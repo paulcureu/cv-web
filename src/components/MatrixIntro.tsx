@@ -61,7 +61,6 @@ export const MatrixIntro = ({ onChoiceMade }: { onChoiceMade: (choice: 'red' | '
                     onEnded={handleVideoEnd}
                     className="w-full h-full object-contain"
                 />
-
                 {isButtonVisible && (
                     <button
                         onClick={toggleSound}
@@ -73,38 +72,53 @@ export const MatrixIntro = ({ onChoiceMade }: { onChoiceMade: (choice: 'red' | '
             </div>
 
             <div ref={pillsSectionRef} className="h-screen bg-black flex flex-col justify-center items-center text-white">
-                <h2 className="text-4xl font-bold mb-16 text-center px-4">This is your last chance. After this, there is no turning back.</h2>
-                <div className="w-full h-64">
+                <h2 className="text-3xl md:text-4xl font-bold mb-8 md:mb-16 text-center px-4">This is your last chance. After this, there is no turning back.</h2>
+                <div className="w-full h-56 md:h-64">
                     <Canvas camera={{ fov: 45 }}>
                         <ambientLight intensity={0.5} />
                         <pointLight position={[10, 10, 10]} />
-                        <group position={[-2.5, 0, 0]}>
+                        {/* MODIFICARE 1: Am apropiat pastilele una de alta */}
+                        <group position={[-1.8, 0, 0]}>
                             <Pill color="blue" onPillClick={onChoiceMade} />
                         </group>
-                        <group position={[2.5, 0, 0]}>
+                        <group position={[1.8, 0, 0]}>
                             <Pill color="red" onPillClick={onChoiceMade} />
                         </group>
                     </Canvas>
                 </div>
 
-                {/* --- AICI ESTE SECȚIUNEA RESPONSIVĂ NOUĂ --- */}
-                <div className="w-full max-w-5xl mt-8 px-4 flex flex-col md:flex-row gap-8 lg:gap-16">
-                    {/* Descrierea pentru pastila albastră */}
-                    <div className="flex-1 text-center md:text-right">
-                        <p className="text-lg text-blue-400 font-semibold">You take the blue pill...</p>
-                        <p className="mt-2 text-gray-400">
-                            ...și vei vedea povestea mea structurată — cum am învățat, am construit aplicații reale și am urmat cele mai bune practici.
-                        </p>
+                <div className="w-full max-w-5xl mt-8 px-6">
+                    <div className="md:hidden text-center space-y-6">
+                        <div>
+                            <p className="text-lg text-blue-400 font-semibold">You take the blue pill...</p>
+                            <p className="mt-1 text-gray-400 text-base">
+                                ...și vei vedea povestea mea structurată — cum am învățat, am construit aplicații reale și am urmat cele mai bune practici.
+                            </p>
+                        </div>
+                        <div>
+                            <p className="text-lg text-red-500 font-semibold">You take the red pill...</p>
+                            <p className="mt-1 text-gray-400 text-base">
+                                ...și vei vedea creativitatea brută — experimentele, soluțiile neconvenționale și pasiunea care mă motivează să construiesc.
+                            </p>
+                        </div>
                     </div>
 
-                    {/* Descrierea pentru pastila roșie */}
-                    <div className="flex-1 text-center md:text-left">
-                        <p className="text-lg text-red-500 font-semibold">You take the red pill...</p>
-                        <p className="mt-2 text-gray-400">
-                            ...și vei vedea creativitatea brută — experimentele, soluțiile neconvenționale și pasiunea care mă motivează să construiesc.
-                        </p>
+                    <div className="hidden md:flex md:flex-row gap-8 lg:gap-16">
+                        <div className="flex-1 text-right">
+                            <p className="text-lg text-blue-400 font-semibold">You take the blue pill...</p>
+                            <p className="mt-2 text-gray-400">
+                                ...and you'll see my clean, structured story — how I learned web development, built real-world apps, and followed best practices.
+                            </p>
+                        </div>
+                        <div className="flex-1 text-left">
+                            <p className="text-lg text-red-500 font-semibold">You take the red pill...</p>
+                            <p className="mt-2 text-gray-400">
+                                ...and you'll see the raw creativity — the late-night experiments, the unconventional solutions, and the passion that drives me to build.
+                            </p>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </>
     );
