@@ -7,7 +7,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Stage } from '@react-three/drei';
 import type { Mesh } from 'three';
 
-// Componenta Pill rămâne neschimbată...
+// Componenta Pill (neschimbată)
 const Pill = ({ color, onPillClick }: { color: 'red' | 'blue', onPillClick: (choice: 'red' | 'blue') => void }) => {
     const meshRef = useRef<Mesh>(null);
 
@@ -50,6 +50,7 @@ export const MatrixIntro = ({ onChoiceMade }: { onChoiceMade: (choice: 'red' | '
 
     return (
         <>
+            {/* Secțiunea Video (neschimbată) */}
             <div
                 className={`fixed top-0 left-0 w-full h-screen bg-black z-40 transition-opacity duration-1000 ${videoFinished ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
             >
@@ -71,13 +72,13 @@ export const MatrixIntro = ({ onChoiceMade }: { onChoiceMade: (choice: 'red' | '
                 )}
             </div>
 
-            <div ref={pillsSectionRef} className="h-screen bg-black flex flex-col justify-center items-center text-white">
-                <h2 className="text-3xl md:text-4xl font-bold mb-8 md:mb-16 text-center px-4">This is your last chance. After this, there is no turning back.</h2>
+            {/* MODIFICARE CHEIE: Am înlocuit h-screen cu min-h-screen și am adăugat padding vertical (py-24) */}
+            <div ref={pillsSectionRef} className="min-h-screen bg-black flex flex-col justify-center items-center text-white py-24 px-4">
+                <h2 className="text-3xl md:text-4xl font-bold mb-8 md:mb-16 text-center">This is your last chance. After this, there is no turning back.</h2>
                 <div className="w-full h-56 md:h-64">
                     <Canvas camera={{ fov: 45 }}>
                         <ambientLight intensity={0.5} />
                         <pointLight position={[10, 10, 10]} />
-                        {/* MODIFICARE 1: Am apropiat pastilele una de alta */}
                         <group position={[-1.8, 0, 0]}>
                             <Pill color="blue" onPillClick={onChoiceMade} />
                         </group>
@@ -87,7 +88,9 @@ export const MatrixIntro = ({ onChoiceMade }: { onChoiceMade: (choice: 'red' | '
                     </Canvas>
                 </div>
 
-                <div className="w-full max-w-5xl mt-8 px-6">
+                {/* Am scos px-4 de aici deoarece l-am pus pe containerul principal */}
+                <div className="w-full max-w-5xl mt-8">
+                    {/* Acest bloc este vizibil DOAR pe mobil */}
                     <div className="md:hidden text-center space-y-6">
                         <div>
                             <p className="text-lg text-blue-400 font-semibold">You take the blue pill...</p>
@@ -103,6 +106,7 @@ export const MatrixIntro = ({ onChoiceMade }: { onChoiceMade: (choice: 'red' | '
                         </div>
                     </div>
 
+                    {/* Acest bloc este vizibil DOAR pe desktop */}
                     <div className="hidden md:flex md:flex-row gap-8 lg:gap-16">
                         <div className="flex-1 text-right">
                             <p className="text-lg text-blue-400 font-semibold">You take the blue pill...</p>
