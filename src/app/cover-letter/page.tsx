@@ -17,10 +17,6 @@ export default function CoverLetterPage() {
 
     return (
         <main>
-            {/*
-        Dacă nu s-a făcut nicio alegere, afișăm intro-ul.
-        Altfel, afișăm scrisoarea de intenție.
-      */}
             {!choice ? (
                 <MatrixIntro onChoiceMade={handleChoice} />
             ) : (

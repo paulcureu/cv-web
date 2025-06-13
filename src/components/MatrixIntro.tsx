@@ -4,10 +4,8 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Stage } from '@react-three/drei';
 import type { Mesh } from 'three';
 
-// Componenta Pill (neschimbată)
 const Pill = ({ color, onPillClick }: { color: 'red' | 'blue', onPillClick: (choice: 'red' | 'blue') => void }) => {
     const meshRef = useRef<Mesh>(null);
 
@@ -50,7 +48,6 @@ export const MatrixIntro = ({ onChoiceMade }: { onChoiceMade: (choice: 'red' | '
 
     return (
         <>
-            {/* Secțiunea Video (neschimbată) */}
             <div
                 className={`fixed top-0 left-0 w-full h-screen bg-black z-40 transition-opacity duration-1000 ${videoFinished ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
             >
@@ -72,7 +69,6 @@ export const MatrixIntro = ({ onChoiceMade }: { onChoiceMade: (choice: 'red' | '
                 )}
             </div>
 
-            {/* MODIFICARE CHEIE: Am înlocuit h-screen cu min-h-screen și am adăugat padding vertical (py-24) */}
             <div ref={pillsSectionRef} className="min-h-screen bg-black flex flex-col justify-center items-center text-white py-24 px-4">
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 md:mb-16 text-center">This is your last chance. After this, there is no turning back.</h2>
                 <div className="w-full h-56 md:h-64">
@@ -87,37 +83,32 @@ export const MatrixIntro = ({ onChoiceMade }: { onChoiceMade: (choice: 'red' | '
                         </group>
                     </Canvas>
                 </div>
-
-                {/* Am scos px-4 de aici deoarece l-am pus pe containerul principal */}
                 <div className="w-full max-w-5xl mt-8">
-                    {/* Acest bloc este vizibil DOAR pe mobil */}
                     <div className="md:hidden text-center space-y-6">
                         <div>
                             <p className="text-lg text-blue-400 font-semibold">You take the blue pill...</p>
                             <p className="mt-1 text-gray-400 text-base">
-                                ...și vei vedea povestea mea structurată — cum am învățat, am construit aplicații reale și am urmat cele mai bune practici.
+                                ...and you’ll see the neat progression — tutorials, frameworks, tools. A developer’s journey, explained.
                             </p>
                         </div>
                         <div>
                             <p className="text-lg text-red-500 font-semibold">You take the red pill...</p>
                             <p className="mt-1 text-gray-400 text-base">
-                                ...și vei vedea creativitatea brută — experimentele, soluțiile neconvenționale și pasiunea care mă motivează să construiesc.
+                                ...and you’ll see the moments that mattered — the errors I learned from, the late realizations, and the inner war to create something that feels alive.
                             </p>
                         </div>
                     </div>
-
-                    {/* Acest bloc este vizibil DOAR pe desktop */}
                     <div className="hidden md:flex md:flex-row gap-8 lg:gap-16">
                         <div className="flex-1 text-right">
                             <p className="text-lg text-blue-400 font-semibold">You take the blue pill...</p>
                             <p className="mt-2 text-gray-400">
-                                ...and you'll see my clean, structured story — how I learned web development, built real-world apps, and followed best practices.
+                                ...and you’ll see the neat progression — tutorials, frameworks, tools. A developer’s journey, explained.
                             </p>
                         </div>
                         <div className="flex-1 text-left">
                             <p className="text-lg text-red-500 font-semibold">You take the red pill...</p>
                             <p className="mt-2 text-gray-400">
-                                ...and you'll see the raw creativity — the late-night experiments, the unconventional solutions, and the passion that drives me to build.
+                                ...and you’ll see the moments that mattered — the errors I learned from, the late realizations, and the inner war to create something that feels alive.
                             </p>
                         </div>
                     </div>
