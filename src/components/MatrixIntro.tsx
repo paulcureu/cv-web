@@ -107,13 +107,13 @@ export const MatrixIntro = ({ onChoiceMade }: { onChoiceMade: (choice: 'red' | '
                         <div>
                             <p className="text-lg text-blue-400 font-semibold">You take the blue pill...</p>
                             <p className="mt-1 text-gray-400 text-base">
-                                ...and you’ll see the neat progression — tutorials, frameworks, tools. A developer’s journey, explained.
+                                ...and you’ll see the polished path — tutorials, frameworks, structured learning. The clean version of how I became a developer.
                             </p>
                         </div>
                         <div>
                             <p className="text-lg text-red-500 font-semibold">You take the red pill...</p>
                             <p className="mt-1 text-gray-400 text-base">
-                                ...and you’ll see the moments that mattered — the errors I learned from, the late realizations, and the inner war to create something that feels alive.
+                                ...the version shaped by curiosity, discomfort, and breakthroughs. A path no tutorial could teach.
                             </p>
                         </div>
                     </div>
@@ -121,13 +121,13 @@ export const MatrixIntro = ({ onChoiceMade }: { onChoiceMade: (choice: 'red' | '
                         <div className="flex-1 text-right">
                             <p className="text-lg text-blue-400 font-semibold">You take the blue pill...</p>
                             <p className="mt-2 text-gray-400">
-                                ...and you’ll see the neat progression — tutorials, frameworks, tools. A developer’s journey, explained.
+                                ...and you’ll see the polished path — tutorials, frameworks, structured learning. The clean version of how I became a developer.
                             </p>
                         </div>
                         <div className="flex-1 text-left">
                             <p className="text-lg text-red-500 font-semibold">You take the red pill...</p>
                             <p className="mt-2 text-gray-400">
-                                ...and you’ll see the moments that mattered — the errors I learned from, the late realizations, and the inner war to create something that feels alive.
+                                ...the version shaped by curiosity, discomfort, and breakthroughs. A path no tutorial could teach.
                             </p>
                         </div>
                     </div>

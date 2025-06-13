@@ -26,7 +26,7 @@ type PillContent = {
 };
 
 const bluePillContent: PillContent = {
-    title: "Blue Pill — The Reasonable Path",
+    title: "Blue Pill — Order, Logic, and Learning",
     sections: [
         { type: 'intro', text: "It all started with one simple question:\n\"How do I go from solving algorithms… to actually making things happen?\"" },
         { type: 'paragraph', text: "I was tired of typing numbers into a console and watching them go through a sorting algorithm or a binary search, just to get a line of output.\nI wanted more. I wanted to build things, see them move, click, change, respond — I wanted code to come alive." },
@@ -65,7 +65,7 @@ const bluePillContent: PillContent = {
 };
 
 const redPillContent: PillContent = {
-    title: "Red Pill — Origin Story",
+    title: "Red Pill — Breaking the Pattern",
     sections: [
         { type: 'intro', text: "Sometimes, all it takes is one spark of curiosity — one misplaced “type” attribute — and the rabbit hole opens. It didn’t start with a tutorial. Or a bootcamp. It started with an HTML tag." },
         { type: 'paragraph', text: "Back in high school, in a computer lab, I noticed my computer science teacher had saved his password on a website — www.pbinfo.ro." },
@@ -75,7 +75,7 @@ const redPillContent: PillContent = {
         { type: 'paragraph', text: "I started learning Python. After years of writing C/C++ and C#, it felt like switching from piano to guitar — same music, different rhythm." },
         { type: 'paragraph', text: "Then I discovered Selenium. Not for UI testing (like a normal human). But for scraping. HLTV.org (strictly for educational purposes, of course 😇). I scraped player stats, match data, team info — all neatly saved to .csv." },
         { type: 'paragraph', text: "The goal? Train an AI model to predict who would win future matches. (Once again: for learning. Not gambling. Definitely. 👀). But it all began with that one type=\"password\" moment. That was the spark." },
-        { type: 'outro_title', text: "🌀 Outro — Return to the Blue Pill" },
+        { type: 'outro_title', text: "🌀 Return to the Blue Pill" },
         { type: 'quote', text: "“You can’t connect the dots looking forward; you can only connect them looking backwards.”", author: "Steve Jobs" },
         { type: 'paragraph', text: "These moments don’t define who I am. They don’t represent my ethics — they’re simply part of the journey." },
         { type: 'paragraph', text: "Without that bit of chaos, maybe I wouldn’t be here today — building real applications, learning modern stacks, understanding architecture, performance, accessibility, DevOps." },
@@ -183,7 +183,7 @@ export const CoverLetterSection = ({ choice, onReturn }: CoverLetterSectionProps
                                     <div className="text-center pt-12">
                                         <Link href="/" className="text-gray-400 font-semibold cursor-pointer hover:text-white transition-colors duration-300 inline-block">
                                             <p>{section.text}</p>
-                                            <span className="mt-2 block">&larr; BACK</span>
+                                            <span className="mt-2 block">&larr; EXIT THE MATRIX</span>
                                         </Link>
                                     </div>
                                 );
