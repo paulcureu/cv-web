@@ -11,12 +11,14 @@ export default function CoverLetterPage() {
 
     const handleChoice = (madeChoice: 'red' | 'blue') => {
         setChoice(madeChoice);
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     };
 
-    // MODIFICARE 1: Creăm o funcție nouă pentru a ne întoarce la "blue pill"
     const handleReturnToBluePill = () => {
         setChoice('blue');
-        // Bonus: Facem scroll lin înapoi la începutul paginii
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
@@ -28,7 +30,6 @@ export default function CoverLetterPage() {
             {!choice ? (
                 <MatrixIntro onChoiceMade={handleChoice} />
             ) : (
-                // MODIFICARE 2: Trimitem noua funcție ca o proprietate 'onReturn'
                 <CoverLetterSection choice={choice} onReturn={handleReturnToBluePill} />
             )}
         </main>
