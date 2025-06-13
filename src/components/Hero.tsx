@@ -1,14 +1,13 @@
+// components/Hero.tsx
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
 import { TypeAnimation } from 'react-type-animation';
-
-import { X, Mail, Phone, Linkedin, RotateCcw } from 'lucide-react';
+import { X, Mail, Phone, Linkedin, Github, RotateCcw } from 'lucide-react';
 
 export default function Hero() {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [ended,  setEnded]  = useState(false);
-
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleReplay = () => {
@@ -25,16 +24,13 @@ export default function Hero() {
                 setIsModalOpen(false);
             }
         };
-
         if (isModalOpen) {
             window.addEventListener('keydown', handleEscape);
         }
-
         return () => {
             window.removeEventListener('keydown', handleEscape);
         };
     }, [isModalOpen]);
-
 
     return (
         <>
@@ -50,11 +46,9 @@ export default function Hero() {
                                     repeat={Infinity}
                                 />
                             </h1>
-
                             <p className="text-lg md:text-xl text-gray-600 mb-8">
                                 If you think math is hard, try web design.
                             </p>
-
                             <div className="flex justify-center md:justify-start gap-4">
                                 <button
                                     onClick={() => setIsModalOpen(true)}
@@ -70,7 +64,6 @@ export default function Hero() {
                                 </a>
                             </div>
                         </div>
-
                         <div className="flex justify-center">
                             <div className="relative w-[300px] h-[300px]">
                                 <video
@@ -87,7 +80,6 @@ export default function Hero() {
                                 >
                                     Your browser does not support the video tag.
                                 </video>
-
                                 {ended && (
                                     <button
                                         onClick={handleReplay}
@@ -131,7 +123,11 @@ export default function Hero() {
                             </div>
                             <a href="https://www.linkedin.com/in/paul-cureu-183863228/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
                                 <Linkedin className="text-gray-500 group-hover:text-black transition-colors" size={24}/>
-                                <span className="text-gray-700 group-hover:text-black transition-colors">Paul Cureu</span>
+                                <span className="text-gray-700 group-hover:text-black transition-colors">Paul</span>
+                            </a>
+                            <a href="https://github.com/paulcureu" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+                                <Github className="text-gray-500 group-hover:text-black transition-colors" size={24}/>
+                                <span className="text-gray-700 group-hover:text-black transition-colors">Paul</span>
                             </a>
                         </div>
                     </div>
