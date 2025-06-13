@@ -31,7 +31,7 @@ const storyChapters = [
         alt: "Imagine despre viitor sau tehnologii moderne"
     },
     {
-        text: "I used to work in dental technology — a beautiful craft, much like chess, it sharpened my patience and helped me value the art of working with your hands. In today’s fast-paced world, that feels like something deeply grounding.",
+        text: "I used to work in dental technology — a beautiful craft. Much like chess, it sharpened my patience and taught me to value the art of working with my hands. In today’s fast-paced world, that feels like something deeply grounding.",
         imageUrl: "/poza-5.jpg",
         alt: "Imagine despre viitor sau tehnologii moderne"
     },
