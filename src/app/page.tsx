@@ -42,7 +42,7 @@ export default function Home() {
                     <Hand3D />
                     <div className="mt-12">
                         <a
-                            href="/CV_Cureu_Paul.pdf"
+                            href="/Paul-CV.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-gray-800 to-black px-8 py-3 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
