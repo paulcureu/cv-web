@@ -5,22 +5,21 @@
 import { useState } from 'react';
 import { CoverLetterSection } from "@/components/CoverLetterSection";
 import { MatrixIntro } from "@/components/MatrixIntro";
+// Nu mai avem nevoie de Header și Footer aici dacă vrem o experiență imersivă
 
 export default function CoverLetterPage() {
-    // State pentru a ști ce a ales utilizatorul
     const [choice, setChoice] = useState<'red' | 'blue' | null>(null);
 
-    // Funcție care va fi apelată din MatrixIntro când se alege o pastilă
     const handleChoice = (madeChoice: 'red' | 'blue') => {
         setChoice(madeChoice);
     };
 
     return (
-        <main>
+        <main className="bg-black min-h-screen">
             {!choice ? (
                 <MatrixIntro onChoiceMade={handleChoice} />
             ) : (
-                <CoverLetterSection />
+                <CoverLetterSection choice={choice} />
             )}
         </main>
     );
