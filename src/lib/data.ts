@@ -25,7 +25,7 @@ export const projects = [
         description: 'A full-stack web project for Restaurants businesses (Back-end done, Front-end in progress)',
         image: '/projects/site-web.png',
         imageGray: '/projects/site-web-gray.png',
-        tags: ['Node.js', 'Express', 'PostgreSQL', 'React'],
+        tags: ['Express', 'PostgreSQL', 'React', 'TypeScript', 'Tailwind 3', 'Prisma','PostgreSQL','Docker','Redis'],
         link: 'https://github.com/paulcureu/Site-Bonjour',
     },
 ];
