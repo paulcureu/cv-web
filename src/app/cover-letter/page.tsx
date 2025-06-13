@@ -5,7 +5,6 @@
 import { useState } from 'react';
 import { CoverLetterSection } from "@/components/CoverLetterSection";
 import { MatrixIntro } from "@/components/MatrixIntro";
-// Nu mai avem nevoie de Header și Footer aici dacă vrem o experiență imersivă
 
 export default function CoverLetterPage() {
     const [choice, setChoice] = useState<'red' | 'blue' | null>(null);
@@ -14,12 +13,23 @@ export default function CoverLetterPage() {
         setChoice(madeChoice);
     };
 
+    // MODIFICARE 1: Creăm o funcție nouă pentru a ne întoarce la "blue pill"
+    const handleReturnToBluePill = () => {
+        setChoice('blue');
+        // Bonus: Facem scroll lin înapoi la începutul paginii
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
     return (
         <main className="bg-black min-h-screen">
             {!choice ? (
                 <MatrixIntro onChoiceMade={handleChoice} />
             ) : (
-                <CoverLetterSection choice={choice} />
+                // MODIFICARE 2: Trimitem noua funcție ca o proprietate 'onReturn'
+                <CoverLetterSection choice={choice} onReturn={handleReturnToBluePill} />
             )}
         </main>
     );
