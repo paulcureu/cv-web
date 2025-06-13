@@ -5,21 +5,48 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import type { Mesh } from 'three';
+import { useCursor } from '@react-three/drei';
 
 const Pill = ({ color, onPillClick }: { color: 'red' | 'blue', onPillClick: (choice: 'red' | 'blue') => void }) => {
     const meshRef = useRef<Mesh>(null);
 
-    useFrame(() => {
+    // Stare pentru a detecta când mouse-ul este deasupra pastilei
+    const [isHovered, setIsHovered] = useState(false);
+    // Schimbă cursorul în 'pointer' la hover
+    useCursor(isHovered);
+
+    // Animația de rotație și plutire
+    useFrame((state) => {
         if (meshRef.current) {
+            // Rotația continuă
             meshRef.current.rotation.y += 0.01;
-            meshRef.current.rotation.x += 0.005;
+            // Animația de plutire sus-jos, folosind un sinus
+            meshRef.current.position.y = Math.sin(state.clock.getElapsedTime() * 2) * 0.1;
         }
     });
 
     return (
-        <mesh ref={meshRef} onClick={() => onPillClick(color)} scale={1.5}>
-            <capsuleGeometry args={[0.3, 0.7, 4, 16]} />
-            <meshStandardMaterial color={color} emissive={color} emissiveIntensity={0.5} toneMapped={false} />
+        <mesh
+            ref={meshRef}
+            onClick={() => onPillClick(color)}
+            // Mărim pastila la hover pentru feedback vizual
+            scale={isHovered ? 1.7 : 1.5}
+            // Setăm starea de hover la intrarea și ieșirea mouse-ului
+            onPointerOver={(e) => { e.stopPropagation(); setIsHovered(true); }}
+            onPointerOut={() => setIsHovered(false)}
+        >
+            {/* Geometrie mai fină, cu mai multe segmente, pentru un aspect mai rotund */}
+            <capsuleGeometry args={[0.3, 0.7, 20, 32]} />
+            <meshStandardMaterial
+                color={color}
+                emissive={color}
+                // Facem pastila să strălucească mai puternic la hover
+                emissiveIntensity={isHovered ? 1.2 : 0.5}
+                toneMapped={false}
+                // Adăugăm proprietăți pentru un aspect lucios, ca de gel
+                metalness={0.1}
+                roughness={0.1}
+            />
         </mesh>
     );
 };
