@@ -1,6 +1,5 @@
 // src/components/ProjectCard.tsx
 import Image from 'next/image';
-// Nu mai avem nevoie de `Link` din Next.js, deoarece folosim un link extern
 import type { projects } from '@/lib/data';
 
 type ProjectType = (typeof projects)[number] & { imageGray?: string };

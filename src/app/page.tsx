@@ -16,21 +16,13 @@ const Hand3D = dynamic(() => import('@/components/Hand3D'), {
     ssr: false
 });
 
-import Image from 'next/image';
-
 export default function Home() {
     return (
         <div className="flex flex-col min-h-screen bg-gray-50">
             <Header />
-
-            {/* ======== Secțiunea Hero ======== */}
             <Hero />
-
-            {/* ======== Secțiunea Citat & 3D ======== */}
             <section className="py-16 bg-white">
                 <div className="container mx-auto px-4 text-center">
-
-                    {/*Steve Jobs */}
                     <figure className="max-w-4xl mx-auto mb-12">
                         <blockquote className="text-xl md:text-2xl italic text-center text-gray-700 leading-relaxed">
                             <p>&#34;Everything around you that you call life was made up by people that were no smarter than you, and you can change it, you can influence it, you can build your own things that other people can use.&#34;</p>

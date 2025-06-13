@@ -19,4 +19,13 @@ export const projects = [
         tags: ['Node.js', 'Express', 'PostgreSQL', 'React'],
         link: 'https://library.balkancode.ro',
     },
+    {
+        slug: 'site-bonjur',
+        title: 'Restaurant Website',
+        description: 'A full-stack web project for Restaurants businesses (Back-end done, Front-end in progress)',
+        image: '/projects/site-web.png',
+        imageGray: '/projects/site-web-gray.png',
+        tags: ['Node.js', 'Express', 'PostgreSQL', 'React'],
+        link: 'https://github.com/paulcureu/Site-Bonjour',
+    },
 ];

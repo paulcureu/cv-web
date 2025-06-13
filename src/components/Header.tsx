@@ -1,6 +1,6 @@
 // src/components/Header.tsx
 import Link from 'next/link';
-import Image from 'next/image'; // Importăm componenta Image
+import Image from 'next/image';
 
 export function Header() {
     return (
