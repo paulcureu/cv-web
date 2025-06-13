@@ -18,7 +18,7 @@ export function Header() {
                 </Link>
 
                 <nav className="flex items-center gap-6 text-gray-600">
-                    <Link href="#about" className="hover:text-black transition-colors">
+                    <Link href="/about" className="hover:text-black transition-colors">
                         About Me
                     </Link>
                     <Link href="/cover-letter" className="hover:text-black transition-colors">
